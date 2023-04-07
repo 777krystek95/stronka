@@ -1,0 +1,610 @@
+@use './animations' as *;
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #104b69;
+	color: rgb(255, 255, 255);
+	height: 100vh;
+	font-size: 62.5%; /* powinno być w HTML ale nie chce mi sie juz zmieniac */
+}
+
+
+h2 {
+	font-size: 3.5rem;
+	color: rgb(233, 193, 14);
+	text-shadow: 2px 2px rgba(0,0,0)
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+
+}
+
+
+// ========NAV==============
+
+.nav {
+	position: fixed;
+	height: 90%;
+	width: 30%;
+	top: 9%;
+	display: flex;
+	transform: translateX(-100%);
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border-top-right-radius: 2%;
+	border-bottom-right-radius: 2%;
+	background-color: #092581;
+	z-index: 10;
+	transition: transform 0.4s;
+
+	.nav-items {
+		position: relative;
+		font-size: 1.4rem;
+		color: gold;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color 0.4s;
+		cursor: pointer;
+	}
+
+	.nav-items::before {
+		content: "";
+		position: absolute;
+		bottom: -0.4rem;
+		left: 0;
+		height: 8%;
+		width: 0%;
+		border-radius: 0.5rem;
+		background-color: rgb(203, 202, 196);
+		transition: width 0.6s;
+	}
+
+	.nav-items:hover::before {
+		width: 100%;
+	}
+
+	.nav-items:hover {
+		color: rgb(60, 91, 184);
+	}
+}
+
+.active {
+	transform: translateX(0%);
+}
+
+//=================HEADER========================================================///////////
+
+
+
+
+
+header {
+	position: relative;
+	height: 100vh;
+	// width: 100%;
+
+	.burger {
+		position: fixed;
+		top: 30px;
+		left: 40px;
+		height: 50px;
+		width: 55px;
+		text-align: center;
+		background-color: transparent;
+		// border: 1px solid rgba(245, 205, 4, 0.34);
+		border-radius: 10%;
+		z-index: 20;
+		cursor: pointer;
+
+
+		.burger-line {
+			height: 3px;
+			display: block;
+			background-color: rgb(252, 252, 22);
+			margin: 8px;
+			transition: width 0.3s;
+		}
+		.one {
+			width: 20%;
+		}
+		.two {
+			width: 35%;
+		}
+		.three {
+			width: 50%;
+		}
+	}
+
+	.burger:hover {
+		.one,
+		.two,
+		.three {
+			width: 70%;
+		}
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url(/img/zakynthos1920.jpg);
+		background-size: cover;
+		background-position: center;
+		z-index: 0;
+
+		.hero-shadow {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: -10;
+		}
+
+		.hero-text {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 10;
+			// background-color: gold;
+
+			h1 {
+				font-size: 5rem;
+				color: gold;
+			}
+
+			p {
+				font-size:2.5rem;
+				color: rgb(211, 211, 211);
+			}
+		}
+	}
+
+	.header-arrow {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 20px;
+		border: 1px solid white;
+		border-radius: 50%;
+		cursor: pointer;
+
+		.arrow-icon {
+			width: 80px;
+		}
+	}
+
+	.header-arrow::before {
+		position: absolute;
+		top: -2%;
+		left: -2%;
+		content: "";
+		height: 100%;
+		width: 100%;
+		border: 2px solid gold;
+		border-radius: 50%;
+		transition: transform 1s;
+		animation: pulse 1s infinite linear;
+	}
+}
+
+// ===============================================ABOUT====================================
+
+.about {
+	// height: 400px;
+	padding-bottom: 20px;
+	background-color: #3d5884c2;
+	transition: all 10s;
+
+	.about-us-heading {
+		padding: 10px 0;
+		text-align: center;
+	}
+
+	.about-us-text {
+		p {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+// ======== CARDS ===============
+
+.sectionCard {
+	position: relative;
+	height: 90vh;
+	// background-color: red;
+	background-image: url(/img/greece_flag.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+
+	.section-shadow {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(12, 67, 115, 0.7);
+		// background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+}
+
+.card-heading {
+	text-align: center;
+	// background-color:lime;
+
+	h2 {
+		padding: 10px 0;
+	}
+	p {
+		padding-bottom: 10px;
+		font-size: 1.5rem;
+	}
+}
+
+.cards {
+	position: relative;
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	// background-color: lime;
+
+	.card {
+		position: relative;
+		height: 480px;
+		width: 35%;
+		margin: 20px;
+		border-radius: 1rem;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 1px 1px 10px 1px gold;
+		z-index: 0;
+		transition: transform 0.4s;
+		cursor: pointer;
+
+		.card-bg {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: -10;
+			border-radius: 1rem;
+		}
+		.card-text {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			font-size: 1rem;
+			padding: 15px 14px;
+			z-index: 10;
+
+
+			h3 {
+				font-weight: bold;
+				font-size: 2rem;
+				color: rgb(255, 236, 131);
+				text-shadow: 0px 0px 3px rgb(208, 208, 39);
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	.card:hover {
+		transform: scale(1.05);
+	}
+
+	.card-one {
+		background-image: url(/img/santorini_640.jpg);
+	}
+	.card-two {
+		background-image: url(/img/Ateny_640.jpg);
+	}
+	.card-three {
+		background-image: url(/img/zakynthos_cave_6640.jpg);
+	}
+	.card-four {
+		background-image: url(/img/Mykonos_640.jpg);
+		background-position: right;
+	}
+}
+
+// ============= ACHIEVEMENTS =====================
+
+.sectionAchieve {
+	position: relative;
+	// background-color: #3d5884c2;
+
+	.achieve-heading {
+		text-align: center;
+		padding-bottom: 20px;
+
+		h2 {
+			padding: 10px 0;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	.achievements-list {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+		// width: 100%;
+		// background-color:red;
+		
+		.achievements {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			display: inline-block;
+			// background-color: rgb(0, 255, 8);
+
+			.box-icon {
+				// background-color: purple;
+				text-align: center;
+
+				.achievement-svg {
+					display: inline-block;
+					width: 80px;
+				}
+			}
+
+			h3 {
+				text-align: center;
+				color: rgb(246, 217, 3);
+				// font-weight: bold;
+				font-size: 2rem;
+				text-shadow: 0px 0px 3px rgb(208, 208, 39);
+			}
+
+			p {
+				text-align: center;
+				font-size: 1.3rem;
+			}
+		}
+	
+	}
+}
+
+
+//================ History ==================
+
+.historySection {
+	position: relative;
+	height: 100%;
+	background-image: url(/img/HistoricalParteon_1280.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	padding-bottom: 50px;
+	
+	.section-shadow {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(12, 67, 115, 0.7);
+			z-index: -10;
+	}
+
+	.history-heading {
+		text-align: center;
+		
+		h2 {
+			padding: 10px 0;
+		}
+
+		p {
+			padding-bottom: 20px;
+			font-size: 1.5rem;
+		}
+	}
+	
+	.history-text {
+		display: flex;
+
+		img {
+			height: 300px;
+
+			border-radius: 15px;
+		}
+
+		.history-card-text {	
+			h3 {
+				text-align: center;
+				color: gold;
+				font-size: 2rem;
+			}
+			
+			p {
+				text-align: justify;
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	.history-one {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		img {
+			display: block;
+			margin-right: 20px;
+		}
+	}
+	.history-two {
+		margin-bottom: 30px;
+
+		img {
+			margin-left: 20px;
+			display: inline-block;
+			height: 450px;
+		}
+	}
+	.history-three {
+		margin-bottom: 30px;
+		img {
+			display: block;
+			margin-right: 20px;
+
+		}
+	}
+	.history-four {
+		img {
+			display: block;
+			margin-left: 20px;
+		}
+	}
+}
+
+.contact {
+	height: 90vh;
+	background-color:#a8a8a8;
+
+	.contact-text {
+		padding-top: 20px;
+		text-align: center;
+
+		h2{
+			color:gold;
+			text-shadow: 2px 2px rgb(0, 0, 0)
+		}
+	}
+
+	.form-box {
+		padding-top: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.form-label {
+			margin: 20px 0;
+			font-size: 2rem;
+			color: rgb(3,3,3);
+		}
+		
+		.form-input {
+			padding: 5px 5px;
+			height: 3rem;
+			width: 100%;
+			border-radius:5px;
+			background-color: #dddddd;
+		}
+
+		.form-textarea {
+			padding: 5px 5px;
+			height: 200px;
+			border-radius:5px;
+			border: 1px solid black;
+			max-height:250px;
+			min-width:1400px;
+			max-width:1400px;
+			background-color: #dddddd;
+		}
+
+		.form-btn {
+			margin-top: 20px;
+			height: 70px;
+			width: 150px;
+			border-radius:5px;
+			font-size: 1.5rem;
+			cursor: pointer;
+			transition: background-color 0.5s, color 0.5s ease-in;
+		}
+		.form-btn:hover {
+			background-color: rgb(97, 136, 254);
+			color: rgb(253, 230, 101);
+		}
+	}
+}
+
+.contact {
+	padding-top: 35px;
+	height: 100vh;
+	.form-box {
+		padding-top: 0;
+		.form-label {
+			margin: 20px 0;
+			font-size: 1.6rem;
+			color: rgb(3,3,3);
+		}
+		
+		.form-input {
+				outline: red;
+				padding: 5px 5px;
+				height: 2.5rem;
+				width: 90%;
+				border-radius:5px;
+				background-color: #dddddd;
+			}
+	
+			.form-textarea {
+				height: 300px;
+				max-height:300px;
+				min-width:90%;
+				max-width:90%;
+				background-color: #dddddd;
+			}
+
+			.form-btn {
+				margin-top: 20px;
+				height: 50px;
+				width: 150px;
+				border-radius:5px;
+				font-size: 1.5rem;
+				cursor: pointer;
+			}
+
+			.form-btn:hover {
+				background-color: rgb(97, 136, 254);
+				color: rgb(253, 230, 101);
+			}
+		}
+	}
+
+footer {
+	background-color:#00000042;
+	.footer-paragraf {
+		color: gold;
+		text-shadow: 1px 1px black;
+		text-align: center;
+		font-size: 1.2rem;
+	}
+}
+
+
+@import "./small";
+@import "./mid";
+@import "./large";

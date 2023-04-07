@@ -1,0 +1,576 @@
+@media (min-width: 320px) and (max-width: 374px) {
+	
+	.nav {
+		height: 100vh;
+		top: 0%;
+		width: 100%;
+
+		.nav-items {
+			font-size: 1rem;
+		}
+	}
+	
+	header {
+
+		.burger {
+			position: fixed;
+			top: 20px;
+			left: 10px;
+			height: 45px;
+			width: 50px;
+
+			.burger-line {
+				height: 3.5px;
+			}
+		}
+		
+		.hero-img {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+	
+			.hero-text {
+				h1 {
+					font-size: 3rem;
+				}
+	
+				p {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	
+		.header-arrow {
+			.arrow-icon {
+					width: 50px;
+			}
+		}
+
+	}
+
+	// =============MAIN============
+
+
+	.about-us-heading {
+		.head {
+			font-size: 2.5rem;
+		}
+	}
+
+	.about-us-text {
+
+		p {
+			text-align: justify;
+			padding: 0 20px;
+		}
+	}
+
+	.sectionCard {
+		height: 290vh;
+
+		.card-heading {
+			padding: 10px;
+			h2 {
+				font-size: 2.5rem;
+				padding:0 0 20px;
+			}
+
+			p {
+				margin-top: 0;
+				padding: 0 15px;
+				font-size: 1.4rem;
+			}
+		}
+
+		.cards {
+			height: 250vh;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.card {
+				height: 600px;
+				width: 80%;
+
+				.card-text {
+					p {
+						padding: 5px 10px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+
+	.sectionAchieve {
+		height: 400px;
+		.achieve-heading {
+			h2 {
+				font-size: 2.5rem;
+				padding-bottom: 10px;
+			}
+
+			p {
+				font-size: 1.4rem;
+			}
+		}
+
+		.achievements-list {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			justify-content: center;
+			
+			.achievements {
+				width: 130px;
+				// background-color: #fff;
+				padding: 5px 1px;
+
+				.achievement-svg {
+					font-size: 1rem;
+					width: 110px;
+					// line-height: 20px;
+				}
+
+				.achievement-heading {
+					margin-left: 10px;
+					text-align: center;
+					font-size: 1.2rem;
+				}
+
+				.achievement-text {
+					margin: 0 10px;
+					padding-top: 10px;
+					font-size: 1rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+
+	// HISTORY
+
+	.historySection {
+		margin-top: 250px;
+		.history-heading {
+			padding: 0px 20px;
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+
+		.history-text {
+			
+			img {
+				height: 200px;
+				width: 200px;
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+			.history-card-text {
+				padding: 10px 20px 0px;
+				h3 {
+					padding-bottom: 10px;
+					font-size: 2rem;
+				}
+				
+				p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.history-one {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-right: 0px;
+		}
+		.history-two {
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+		.history-three {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.history-four {
+			padding-bottom: 0px;
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.contact {
+		padding-top: 35px;
+		height: 105vh;
+		.form-box {
+			padding-top: 0;
+			.form-label {
+				margin: 10px 0;
+				font-size: 1.6rem;
+				color: rgb(3,3,3);
+			}
+			
+			.form-input {
+				padding: 5px 5px;
+				height: 1.8rem;
+				width: 90%;
+				border-radius:5px;
+				background-color: #dddddd;
+			}
+	
+			.form-textarea {
+				height: 160px;
+				max-height:150px;
+				min-width:90%;
+				max-width:90%;
+				background-color: #dddddd;
+			}
+	
+			.form-btn {
+				margin-top: 20px;
+				height: 50px;
+				width: 150px;
+				border-radius:5px;
+				font-size: 1.5rem;
+				cursor: pointer;
+			}
+			.form-btn:hover {
+				background-color: rgb(97, 136, 254);
+				color: rgb(253, 230, 101);
+			}
+		}
+	}
+
+	footer {
+		background-color:#00000042;
+		.footer-text {
+			.footer-paragraf {
+				color: rgb(247, 255, 6);
+				font-size: .9rem;
+			}
+		}
+	}
+		
+}
+
+
+
+
+@media (min-width: 375px) and (max-width: 575px) {
+	.nav {
+		height: 100vh;
+		top: 0%;
+		width: 100%;
+
+		.nav-items {
+			font-size: 1rem;
+		}
+	}
+	
+	header {
+
+		.burger {
+			position: fixed;
+			top: 20px;
+			left: 10px;
+			height: 45px;
+			width: 50px;
+
+			.burger-line {
+				height: 3.5px;
+			}
+		}
+		
+		.hero-img {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+	
+			.hero-text {
+				h1 {
+					font-size: 3rem;
+				}
+	
+				p {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	
+		.header-arrow {
+			.arrow-icon {
+					width: 50px;
+			}
+		}
+
+	}
+
+	// =============MAIN============
+
+
+	.about-us-heading {
+		.head {
+			font-size: 2.5rem;
+		}
+	}
+
+	.about-us-text {
+
+		p {
+			text-align: justify;
+			padding: 0 20px;
+		}
+	}
+
+	.sectionCard {
+		height: 280vh;
+
+		.card-heading {
+			padding: 10px;
+			h2 {
+				font-size: 2.5rem;
+				padding:0 0 20px;
+			}
+
+			p {
+				margin-top: 0;
+				padding: 0 15px;
+				font-size: 1.4rem;
+			}
+		}
+
+		.cards {
+			height: 250vh;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.card {
+				height: 600px;
+				width: 80%;
+
+				.card-text {
+					p {
+						padding: 5px 10px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+
+	.sectionAchieve {
+		height: 400px;
+		.achieve-heading {
+			h2 {
+				font-size: 2.5rem;
+				padding-bottom: 10px;
+			}
+
+			p {
+				font-size: 1.4rem;
+			}
+		}
+
+		.achievements-list {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: baseline;
+			justify-content: center;
+			
+			.achievements {
+				width: 130px;
+				// background-color: #fff;
+				padding: 5px 1px;
+
+				.achievement-svg {
+					font-size: 1rem;
+					width: 110px;
+					// line-height: 20px;
+				}
+
+				.achievement-heading {
+					margin-left: 10px;
+					text-align: center;
+					font-size: 1.2rem;
+				}
+
+				.achievement-text {
+					margin: 0 10px;
+					padding-top: 10px;
+					font-size: 1rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+
+	// HISTORY
+
+	.historySection {
+		margin-top: 250px;
+		.history-heading {
+			padding: 0px 20px;
+			h2 {
+				font-size: 2.5rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+
+		.history-text {
+			
+			img {
+				height: 200px;
+				width: 200px;
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+			.history-card-text {
+				padding: 10px 20px 0px;
+				h3 {
+					padding-bottom: 10px;
+					font-size: 2rem;
+				}
+				
+				p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		.history-one {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-right: 0px;
+		}
+		.history-two {
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+		.history-three {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.history-four {
+			padding-bottom: 0px;
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.contact {
+		padding-top: 35px;
+		height: 105vh;
+		.form-box {
+			padding-top: 0;
+			.form-label {
+				margin: 10px 0;
+				font-size: 1.6rem;
+				color: rgb(3,3,3);
+			}
+			
+			.form-input {
+				padding: 5px 5px;
+				height: 1.8rem;
+				width: 90%;
+				border-radius:5px;
+				background-color: #dddddd;
+			}
+	
+			.form-textarea {
+				height: 250px;
+				max-height:250px;
+				min-width:90%;
+				max-width:90%;
+				background-color: #dddddd;
+			}
+	
+			.form-btn {
+				margin-top: 20px;
+				height: 50px;
+				width: 150px;
+				border-radius:5px;
+				font-size: 1.5rem;
+				cursor: pointer;
+			}
+			.form-btn:hover {
+				background-color: rgb(97, 136, 254);
+				color: rgb(253, 230, 101);
+			}
+		}
+	}
+
+	footer {
+		background-color:#00000042;
+		.footer-text {
+			.footer-paragraf {
+				color: rgb(247, 255, 6);
+				font-size: .9rem;
+			}
+		}
+	}
+}
+
+
+@media (min-height:700px) and (max-height:749px) {
+	.contact {
+		.form-box {
+			.form-input {
+				height: 1.8rem;
+			}
+	
+			.form-textarea {
+				height: 320px;
+				max-height:320px;
+			}
+		}
+	}
+}
+
+@media (min-height:750px) and (max-height:820px) {
+	.contact {
+		height: 100vh;
+		.form-box {
+			.form-input {
+				height: 1.8rem;
+			}
+	
+			.form-textarea {
+				height: 365px;
+				max-height:365px;
+			}
+		}
+	}
+}

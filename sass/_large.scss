@@ -1,0 +1,48 @@
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    nav {
+        .nav {
+            width: 80%;
+        }
+    }
+
+    header {
+        .header-arrow {
+			.arrow-icon {
+					width: 80px;
+			}
+		}
+    }
+
+    .about {
+        .about-us-text {
+            padding: 10px 20px 10px;
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+
+    .sectionCard {
+        height: 150vh;
+
+		.cards {
+            // background-color: red;
+            display: flex;
+            flex-wrap: wrap;
+			.card {
+				.card-text {
+					p {
+						padding: 5px 10px;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+
+
+}
